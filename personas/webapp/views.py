@@ -1,7 +1,10 @@
 from django.shortcuts import render
-#from django.http import HttpResponse
+from students.models import studentsperformance
 
-
-# Create your views here.
 def home(request):
+
     return render(request, 'bienvenido.html')
+
+def nosotros(request):
+
+    return render(request, 'nosotros.html')
