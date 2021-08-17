@@ -1,0 +1,77 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block head %}
+        <script src="{% static 'lib/highcharts/highcharts.js' %}"></script>
+        <script src="{% static 'lib/highcharts/modules/export-data.js' %}"></script>
+        <script src="{% static 'lib/highcharts/modules/exporting.js' %}"></script>
+        <script src="{% static 'lib/highcharts/modules/accessibility.js' %}"></script>
+	{% endblock %}
+{% block content %}
+    				<div class="container-fluid">
+			          <div class="row ">
+                          <div class="col-lg-12">
+                              <div id="contenedor"></div>
+
+                          </div>
+                      </div>
+                    </div>
+            <script >
+                Highcharts.chart('contenedor', {
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Cambiar titulo'
+            },
+            xAxis: {
+                categories: ['Grupo A', 'Grupo B', 'Grupo C', 'Grupo D', 'Grupo E'],
+                title: {
+                    text: null
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Population (millions)',
+                    align: 'high'
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' Cantidad'
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -40,
+                y: 80,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor:
+                    Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+                shadow: true
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                name: 'Cantidad personas por grupo',
+                colorByPoint: true,
+                data: [107, 31, 635, 203, 2]
+
+            }]
+        });
+            </script>
+{% endblock %}

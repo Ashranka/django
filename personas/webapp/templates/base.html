@@ -10,6 +10,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="{% static 'css/fontello.css' %}">
 	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+	{% block head %}
+
+	{% endblock %}
+
 
 </head>
 
@@ -21,7 +25,7 @@
 				<!-- Nombre de usuario -->
 				<div
 					class="col-md-12 col-lg logo d-flex align-items-center justify-content-center justify-content-lg-start">
-					<a class="nombre" href="index.html">Trabajo django</a>
+					<a class="nombre" href="{% url 'home' %}">Trabajo django</a>
 					<samp class="icono icon-dot"></samp>
 
 				</div>
@@ -46,6 +50,7 @@
 	<!--Contenido-->
 
             {% block content %}
+
             {% endblock %}
 
 	<!--Piede pagina -->
