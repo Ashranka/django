@@ -1,0 +1,64 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block head %}
+        <script src="{% static 'lib/highcharts/highcharts.js' %}"></script>
+        <script src="{% static 'lib/highcharts/modules/export-data.js' %}"></script>
+        <script src="{% static 'lib/highcharts/modules/exporting.js' %}"></script>
+        <script src="{% static 'lib/highcharts/modules/accessibility.js' %}"></script>
+	{% endblock %}
+{% block content %}
+    				<div class="container-fluid">
+			          <div class="row ">
+                          <div class="col-lg-12">
+                              <div id="contenedor"></div>
+
+                          </div>
+                      </div>
+                    </div>
+            <script language="JavaScript" >
+            Highcharts.chart('contenedor', {
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'que tanto rinden los alumnos que no almuerzan vs lo que si lo hacen'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                accessibility: {
+                    point: {
+                        valueSuffix: '%'
+                    }
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                        }
+                    }
+                },
+                series: [{
+                    name: 'Brands',
+                    colorByPoint: true,
+                    data: [{
+                        name: 'free/reduced',
+                        y: 38.59,
+                        sliced: true,
+                        selected: true
+                    }, {
+                        name: 'standart',
+                        y: 61.41
+                    }]
+                }]
+            });
+            </script>
+{% endblock %}

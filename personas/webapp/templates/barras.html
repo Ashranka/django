@@ -17,13 +17,13 @@
                           </div>
                       </div>
                     </div>
-            <script >
+            <script language="JavaScript">
                 Highcharts.chart('contenedor', {
             chart: {
                 type: 'bar'
             },
             title: {
-                text: 'Cambiar titulo'
+                text: 'Cantidad de alumnos por cada grupo'
             },
             xAxis: {
                 categories: ['Grupo A', 'Grupo B', 'Grupo C', 'Grupo D', 'Grupo E'],
@@ -34,7 +34,7 @@
             yAxis: {
                 min: 0,
                 title: {
-                    text: 'Population (millions)',
+                    text: false,
                     align: 'high'
                 },
                 labels: {
@@ -42,7 +42,7 @@
                 }
             },
             tooltip: {
-                valueSuffix: ' Cantidad'
+                valueSuffix: ' Personas'
             },
             plotOptions: {
                 bar: {
@@ -69,7 +69,7 @@
             series: [{
                 name: 'Cantidad personas por grupo',
                 colorByPoint: true,
-                data: [107, 31, 635, 203, 2]
+                data: [107, 31, 635, 203, 24]
 
             }]
         });

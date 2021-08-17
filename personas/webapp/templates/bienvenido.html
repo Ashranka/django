@@ -12,31 +12,42 @@
 				<div class="col">
 					<h2 class="titulo">Home</h2>
 					<div class="row projects justify-content-center">
-						<div class="content-project col-12 col-lg-4 col-md-4">
-							<a href="" data-toggle="modal" data-target="#modal">
-								<img src="{% static 'img/bg.jpg' %}" class="img-fluid" alt="...">
-							</a>
+
+						<div class="content-project col-lg-12 col-lg-8 col-md-8">
+							<h5 class="title-project"></h5>
+							<p>En este pequeño proyecto trabajare con una base de datos de estudiantes a los cuales se les tomaron 3 exámenes distintos como el de matemática,
+								escritura y lectura en las cuales se califican como 0 menor calificación y la mayor un 100, también los jóvenes están separados en 5 grupos distintos.
+								Además, se evalúan distintos factores de los jóvenes evaluado como por ejemplo el nivel académico de los padres, si tuvo clases de reforzamientos, etc.</p>
+							<p>Espero con este apoyo visual se pueda ver si hay muchas diferencias entre algunos grupos y quizás podamos ver por qué pasa esto</p>
+
 						</div>
-						<div class="content-project col-12 col-lg-8 col-md-8">
-							<h5 class="title-project">List-based media object</h5>
-							<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
-								Cras
-								purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi
-								vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-							<a href="{% url 'barras' %}" class="btn link-project">Grafico barras</a>
-						</div>
+						<!--- 1 -->
 
 						<div class="content-project col-12 col-lg-4 col-md-4">
 							<a href="" data-toggle="modal" data-target="#modal">
-								<img src="{% static 'img/bg2.jpg' %}" class="img-fluid" alt="...">
+								<img src="{% static 'img/1.png' %}" class="img-fluid" alt="...">
 							</a>
 						</div>
 						<div class="content-project col-12 col-lg-8 col-md-8">
-							<h5 class="title-project">List-based media object</h5>
-							<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
-								Cras
-								purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi
-								vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+							<h5 class="title-project">Grafico de barras</h5>
+							<p>Un diagrama de barras, gráfico de barras o gráfico de columnas, es una forma de representar gráficamente
+								un conjunto de datos o valores mediante barras rectangulares de longitud proporcional a los valores representados</p>
+
+							<a href="{% url 'barras' %}" class="btn link-project">Grafico de barras</a>
+						</div>
+
+						<!--- 2 -->
+
+						<div class="content-project col-12 col-lg-4 col-md-4">
+							<a href="" data-toggle="modal" data-target="#modal">
+								<img src="{% static 'img/2.png' %}" class="img-fluid" alt="...">
+							</a>
+						</div>
+						<div class="content-project col-12 col-lg-8 col-md-8">
+							<h5 class="title-project">Gráfico circular</h5>
+							<p>Un gráfico circular o gráfica circular, también llamado "gráfico de pastel ", "gráfica de pizza", "gráfico de tarta", "gráfico de torta"o"gráfica de 360 grados",
+								es un recurso estadístico que se utiliza para representar porcentajes y proporciones</p>
+							<a href="{% url 'pie' %}" class="btn link-project">Gráfico circular</a>
 						</div>
 
 
